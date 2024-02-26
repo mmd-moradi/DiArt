@@ -1,0 +1,359 @@
+.ArtInfoContainer {
+  width: 100%;
+  height: 600px;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ArtInfoDetailCon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.ArtInfoDetailNameCon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 16px;
+}
+.ArtInfoDetailName{
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ArtInfoDetailOwnerCon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.ArtInfoDetailOwner {
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+.ArtInfoDetailOwnerName {
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--info5);
+}
+.ArtInfoDetailOwnerName:hover {
+  text-decoration: underline;
+  color: var(--info6);
+}
+
+.ArtInfoSellInfoCard {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: var(--primaryGradientBac);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 16px;
+}
+.ArtInfoCreated {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ArtInfoCreatedData {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.ArtInfoBuyCon {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ArtInfoBuyPriceCon {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.ArtInfoBuyPriceTagCon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ArtInfoBuyPriceTag {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgb(243 244 246);
+  margin-bottom: 12px;
+}
+
+.ArtInfoBuyPriceTagCon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ArtInfoBuyPriceValueCon {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ArtInfoBuyPrice {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.ArtInfoBuyOrder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.ArtInfoBuyButtonCon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 12px;
+  background: var(--bacBuyButton);
+  overflow: hidden;
+}
+
+
+
+.ArtInfoBuyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1.7;
+  background-color: transparent;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.ArtInfoBuyButton:hover {
+  background-color: var(--bacBuyButtonHover);
+}
+.ArtInfoBuyButtonSelf {
+  width: 100%;
+  background-color: transparent;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+ 
+
+.ArtInfoAddCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 0.3;
+  background-color: transparent;
+}
+
+.ArtInfoAddCartButton:hover {
+  background-color: var(--bacBuyButtonHover);
+}
+
+.ArtInfoAddCartButtonSelf {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+
+.ArtInfoBuyQuantityButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 12px;
+  background: var(--primaryGradient3);
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ArtInfoBuyQuantityMinus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+}
+
+.ArtInfoBuyQuantityMinusBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.ArtInfoBuyQuantity {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  color: white;
+}
+
+.ArtInfoBuyQuantityPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+}
+
+.ArtInfoBuyQuantityPlusBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.ArtInfoBuyQuantityBtnIcon {
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+}
+.ArtInfoBuyQuantityBtnIcon:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ArtInfoDescription {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: var(--primaryGradientBac);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ArtInfoDescriptionTitle {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ArtInfoDescriptionTitleIcon {
+  font-size: 20px;
+  color: white;
+}
+.ArtInfoDescriptionTitleText {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  color: white;
+}
+
+.ArtInfoDescriptionCon {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+
+.ArtInfoDescriptionText{
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+}
+
+
+@media (min-width: 768px) {
+  .ArtInfoDetailName {
+    font-size: 32px;
+  }
+  .ArtInfoDetailNameCon {
+    margin-bottom: 32px;
+  }
+  .ArtInfoBuyPriceTag {
+    font-size: 24px;
+  }
+  .ArtInfoBuyPrice {
+    font-size: 30px;
+  }
+  .ArtInfoBuyButtonSelf {
+    padding: 16px 24px;
+  }
+  .ArtInfoAddCartButtonSelf {
+    padding: 14px 12px;
+  }
+}

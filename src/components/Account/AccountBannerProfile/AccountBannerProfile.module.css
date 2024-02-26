@@ -1,0 +1,40 @@
+
+/* .AccountProfileBanImgContainer {
+  margin-top: 32px;
+  position: relative;
+  overflow: hidden;
+  inset: 0px;
+  width: 100%;
+  height: 350px;
+} */
+
+
+.AccountProfileBanImgContainer {
+  position: absolute;
+  inset: 0px;
+}
+
+.AccountProfileBanIconCon {
+  position: absolute;
+  inset: 0px;
+  z-index: 5;
+  transition: all 0.2s ease-in-out;
+}
+
+.AccountProfileBanIcon {
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  padding-top: 16px;
+  cursor: pointer;
+}
+
+.AccountProfileBanIconCon:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.AccountProfileBanIconCon:hover .AccountProfileBanIcon {
+  display: flex;
+}

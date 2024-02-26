@@ -1,0 +1,221 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.AuthSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 995;
+}
+
+
+
+
+.AuthContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  max-width: 500px;
+  max-height: 450px;
+  background: var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.ClosingBtn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  padding: 7px 8px;
+  background-color: var(--white);
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: var(--primary);
+}
+.ClosingBtn:hover {
+  opacity: 0.8;
+}
+
+.TabsRoot {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.TabsList {
+  flex-shrink: 0;
+  display: flex;
+  border-bottom: 2px solid var(--tertiary3);
+  outline: none;
+}
+
+.TabsTrigger {
+  font-family: inherit;
+  background-color: transparent;
+  padding: 0 20px;
+  height: 45px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--tertiary3);
+  user-select: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.TabsTrigger:first-child {
+  border-top-left-radius: 6px;
+}
+.TabsTrigger:last-child {
+  border-top-right-radius: 6px;
+}
+.TabsTrigger:hover {
+  color: var(--white);
+}
+.TabsTrigger[data-state='active'] {
+  color: var(--white);
+  box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
+}
+.TabsTrigger:focus {
+  position: relative;
+}
+
+.TabsContent {
+  flex-grow: 1;
+  padding: 30px 20px 20px 20px;
+  background: transparent;
+  outline: none;
+}
+
+.FormRoot {
+  width: 100%;
+  height: 100%;
+}
+
+.FormField {
+  display: grid;
+  margin-bottom: 15px;
+}
+
+
+.FormLabel {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 35px;
+  color: white;
+}
+
+.FormMessage {
+  font-size: 12px;
+  font-weight: 700;
+  color: whitesmoke;
+  opacity: 0.9;
+}
+
+.Input {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #222222;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+}
+.Input:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.Input:focus{
+  outline: 2px solid #3081ED;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+}
+.Input::selection {
+  background-color: #3498db;
+  color: white;
+}
+
+.Input {
+  padding: 0 10px;
+  height: 35px;
+  line-height: 1;
+}
+
+.FormSubmit {
+  padding: 14px 64px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: var(--primaryGradient1);
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow background 0.3s ease-in-out;
+}
+
+.FormSubmit:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: var(--primaryGradient2);
+}
+.FormSubmit:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.GoogleLogin {
+  margin-top: 15px;
+  padding: 14px 64px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow background 0.3s ease-in-out;
+}
+
+.GoogleLogin:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+.GoogleLogin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+

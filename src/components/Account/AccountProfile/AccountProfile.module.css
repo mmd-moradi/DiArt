@@ -1,0 +1,36 @@
+.AccountProfileImgCon {
+  position: relative;
+  background-color: rgb(18, 18, 18);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.AccountProfileUploadCon {
+  position: absolute;
+  inset: 0px;
+}
+
+.AccountProfileIconCon {
+  position: absolute;
+  inset: 0px;
+  z-index: 6;
+  transition: all 0.2s ease-in-out;
+}
+
+.AccountProfileIcon {
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+  cursor: pointer;
+}
+
+.AccountProfileIconCon:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.AccountProfileIconCon:hover .AccountProfileIcon {
+  display: flex;
+}

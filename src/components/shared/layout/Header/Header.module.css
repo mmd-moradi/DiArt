@@ -1,0 +1,78 @@
+
+.HeaderContainer {
+  padding: 0px 32px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--primary);
+  z-index: 900;
+}
+
+.HeaderContainerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.LogoContainer {
+  justify-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.NavItemsContainer {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.GradientNavItem {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.GradientNavItem:hover {
+  color: var(--secondary);
+}
+
+.UserSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.HeaderButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: var(--primaryGradient1);
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.HeaderButton:hover {
+  background: var(--primaryGradient3);
+}
+
+.BtnP {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .HeaderContainer {
+    padding: 0px 64px;
+  }
+  
+}

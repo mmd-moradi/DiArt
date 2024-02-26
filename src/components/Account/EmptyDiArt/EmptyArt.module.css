@@ -1,0 +1,36 @@
+.AccountArtsEmptyCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  border-radius: 10px;
+  height: 250px;
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.AccountArtsEmptyTitle {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  color: white
+}
+
+.AccountArtsEmptyButton {
+  margin-top: 25px;
+  max-width: 200px;
+  background: var(--primaryGradient);
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+.AccountArtsEmptyButton:hover {
+  background: var(--primaryGradientHover);
+}

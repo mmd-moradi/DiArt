@@ -1,0 +1,48 @@
+.ArtContainer {
+  margin-top: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.ArtImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.ArtInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ArtContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 32px;
+    gap: 0;
+  }
+  .ArtImgContainer {
+    width: initial;
+    flex: 3 0 0%;
+    max-width: 50%;
+    min-width: 40%;
+  }
+
+  .ArtInfoContainer{
+    margin-left: 20px;
+    width: initial;
+    flex: 4 0 0%;
+  }
+}

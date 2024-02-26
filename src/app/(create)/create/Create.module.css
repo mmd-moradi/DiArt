@@ -1,0 +1,142 @@
+
+
+.CreateMain {
+  padding: 0 32px;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.CreateContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content: center;
+}
+
+.CreateConHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 900px;
+}
+
+.CreateConTitle {
+  line-height: 40px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--white);
+}
+
+.CreateConDesc {
+  line-height: 24px;
+  font-size: 16px;
+  color: var(--white);;
+}
+
+.CreateConFormSectionDesc{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  width: 500px;
+  height: 200px;
+}
+
+.CreateConForm {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 900px;
+}
+
+.CreateConFormSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.CreateConFormLabel {
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+
+.CreateConArtIn, .CreateConArtInNum {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 8px;
+  width: 300px;
+  height: 50px;
+}
+
+.CreateConArtIn:hover,
+.CreateConArtIn:focus,
+.CreateConArtInNum:hover,
+.CreateConArtInNum:focus,
+.CreateConArtDesc:hover,
+.CreateConArtDesc:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.CreateConArtIn::placeholder,
+.CreateConArtInNum::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.CreateConArtInNum::-webkit-inner-spin-button,
+.CreateConArtInNum::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.CreateConFormSubmitBtn {
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--primaryGradient);
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+.CreateConFormSubmitBtn:hover {
+  background: var(--primaryGradientHover);
+}
+
+.ErrComponent {
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.CreateConArtDesc {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+}

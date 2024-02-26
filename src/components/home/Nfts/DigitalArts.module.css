@@ -1,0 +1,132 @@
+/* 
+.NftsSection {
+  margin-top: 100px;
+  width: 100%;
+  padding: 0 32px 32px 32px;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.NftsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 48px;
+  padding: 80px 5px;
+}
+
+.NftsContainerTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NftsContainerTitleH {
+  color: var(--white);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; 
+}
+
+.NftsContainerTitleA {
+  color: var(--secondary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; 
+}
+
+.NftsContainerTitleA:hover {
+  color: var(--white);
+}
+
+.NftsContainerCards {
+  display: flex;
+  padding: 10px 5px;
+  align-items: center;
+  gap: 30px;
+}
+
+.NftsContainerCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--primaryGradient0);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+}
+.NftsContainerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: var(--primaryGradient3);
+}
+
+.NftsContainerCardImg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.NftsContainerCardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 15px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.NftsContainerCardTitleP {
+  color: var(--white);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%; 
+}
+
+.NftsContainerCardTitlePrice {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.NftsContainerCardTitlePriceP {
+  color: var(--white);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%; 
+}
+
+.NftsContainerCardDesc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 20px 10px;
+}
+
+.NftsContainerCardDescP {
+  color: var(--secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%; 
+  letter-spacing: -0.32px;
+}
+
+.NftsContainerCardDescBtn {
+  text-align: center;
+  border-radius: 8px;
+  padding: 5px 30px;
+  border: 1px solid rgba(215, 215, 215, 0.60);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.NftsContainerCardDescBtn:hover {
+  background-color: var(--secondary);
+} */

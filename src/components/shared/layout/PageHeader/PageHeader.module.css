@@ -1,0 +1,133 @@
+
+.HeaderContainer {
+  padding: 16px 16px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--primary);
+  z-index: 900;
+}
+
+.HeaderContainerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.HeaderBackContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.HeaderBackButton {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: var(--primaryGradient2);
+  cursor: pointer;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderBackButton:hover {
+  background: var(--primaryGradient3);
+
+}
+
+
+.HeaderBackDesc {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+.LogoContainer {
+  justify-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.NavItemsContainer {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.GradientNavItem {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.GradientNavItem:hover {
+  color: var(--secondary);
+}
+
+.UserSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.HeaderButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: var(--primaryGradient1);
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.HeaderButton:hover {
+  background: var(--primaryGradient3);
+}
+
+.BtnP {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.HeaderButtonCart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: var(--primaryGradient1);
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.HeaderButtonCart:hover {
+  background: var(--primaryGradient3);
+}
+
+.HeaderButtonCartIcon {
+  font-size: 22px;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .HeaderContainer {
+    padding: 16px 32px;
+  }
+}

@@ -1,0 +1,104 @@
+/* 
+.Market {
+  margin-top: 20px;
+  padding: 100px 32px;
+  width: 100%;
+
+}
+
+.MarketCaseContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.MarketCases {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.MarketCase {
+  display: flex;
+  align-items: center;
+}
+
+
+.MarketCase:nth-child(2) {
+  padding-top: 64px;
+  padding-right: 200px;
+}
+
+.MarketCase:nth-child(3) {
+  padding-left: 32px; 
+}
+
+.MarketCase:nth-child(4) {
+  padding-top: 64px;
+  padding-left: 32px;
+}
+
+.MarketCaseImg {
+  position: relative;
+  width: 250px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.MarketCaseCta {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.MarketCaseCtaTitle {
+  color: var(--white);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; 
+  letter-spacing: -1.04px;
+}
+
+.MarketCaseCtaDesc {
+  color: var(--secondary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 147%; 
+  letter-spacing: 0.2px;
+}
+
+.MarketCaseCtaBtn {
+  width: 60%;
+  display: flex;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--primaryGradient);
+  border-radius: 25px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #2f7ae1;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.MarketCaseCtaBtn svg {
+  color: #2f7ae1;
+  transition: transform 0.3s ease;
+}
+
+.MarketCaseCtaBtn:hover {
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: var(--white);
+  font-weight: 600;
+}
+.MarketCaseCtaBtn:hover svg {
+  color: var(--white);
+  transform: translateX(5px);
+} */

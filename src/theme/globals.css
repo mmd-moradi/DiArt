@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #181723;
+  color: #fff;
+  font-family: "Poppins", sans-seris;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root,
+#__next,
+#__next > div,
+.theme_0 {
+  height: 100%;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  position: relative;
+  z-index: 0;
+  scroll-behavior: smooth;
+}
