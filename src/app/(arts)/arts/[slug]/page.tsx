@@ -1,6 +1,5 @@
 
 import ArtImg from "@/components/Art/ArtImg/ArtImg"
-import styles from "./Art.module.css"
 import ArtInfo from "@/components/Art/ArtInfo/ArtInfo"
 import { getDArtsDataByUUID } from "@/app/api/_actions"
 import { notFound } from "next/navigation"

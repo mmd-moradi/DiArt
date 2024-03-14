@@ -1,6 +1,5 @@
 "use client"
 import FileUpload from "@/components/Create/FileUpload/FileUpload";
-import styles from "./Create.module.css";
 import { Controller, FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { getsigniture, saveToDatabase } from "@/app/api/_actions";
@@ -26,7 +25,7 @@ export interface CloudinaryRes {
 
 
 const ErrComponent = ({ message }: { message: string }) => (
-  <p className="text-danger text-sm font-semibold mt-1">{message}</p>
+  <p className="text-dangerInput text-sm font-semibold mt-1">{message}</p>
 )
 
 const Create = () => {
@@ -81,7 +80,7 @@ const Create = () => {
   console.log(methods.formState.errors);
   return (
     <main className="px-8 w-full mt-8 md:px-16">
-      <div className="flex flex-col items-start md:items-center">
+      <div className="flex flex-col items-start md:justify-center md:max-w-2xl md:mx-auto md:w-full">
         <div className="flex flex-col items-start justify-center">
           <h2 className="leading-10 mb-3 font-semibold text-2xl text-white md:text-3xl">
             First, you&apos;ll need to deploy your <br className="hidden md:block" />Digital Art
@@ -116,7 +115,7 @@ const Create = () => {
                 {...methods.register("dArtName", {required: {value: true, message: "Please Provide a name for your Digital Art"},
                 maxLength: {value: 50, message: "Digital Art name cannot be longer than 50 characters"},})}
                 className={`outline-none border border-whiteAlpha5 text-white bg-transparent rounded-lg text-base p-2 
-                w-72 h-12 focus:border-whiteAlpha7 ${methods.formState.errors.dArtName && "border border-danger"}`}
+                w-72 h-12 focus:border-whiteAlpha7 ${methods.formState.errors.dArtName && "border border-dangerInput"}`}
                 type="text"
                 placeholder="My art name"
                 maxLength={50}
@@ -138,7 +137,7 @@ const Create = () => {
                     pattern: {value: /^[0-9]*$/, message: "You can only enter numbers"}
                   }))}
                   className={`outline-none border border-whiteAlpha5 text-white bg-transparent rounded-lg text-base p-2 w-72 
-                  h-12 focus:border-whiteAlpha7 ${methods.formState.errors.dArtName && "border border-danger"}`}
+                  h-12 focus:border-whiteAlpha7 ${methods.formState.errors.nCopies && "border border-dangerInput"}`}
                   placeholder="5"
                 />
                 {methods.formState.errors.nCopies &&
@@ -157,7 +156,7 @@ const Create = () => {
                     pattern: {value: /^[0-9]*$/, message: "You can only enter numbers"}
                   })} 
                   className={`outline-none border border-whiteAlpha5 text-white bg-transparent rounded-lg text-base p-2 w-72 
-                  h-12 focus:border-whiteAlpha7 ${methods.formState.errors.dArtName && "border border-danger"}`}
+                  h-12 focus:border-whiteAlpha7 ${methods.formState.errors.pricePerCopy && "border border-dangerInput"}`}
                   placeholder="$10"
                 />
                 {methods.formState.errors.pricePerCopy &&
@@ -165,7 +164,7 @@ const Create = () => {
                 }
               </div>
             </div>
-            <div className="flex flex-col gap-3 mb-8">
+            <div className="w-full flex flex-col gap-3 mb-8">
               <label className="leading-6 font-semibold text-lg">
                 Description
               </label>
@@ -173,8 +172,8 @@ const Create = () => {
                 {...methods.register("description", (
                   {required: {value: true, message: "Please provide description for your Digital Art"},
                   maxLength: {value: 1000, message: "Description cannot be longer than 1000 characters"},}))}
-                className={`outline-none border border-whiteAlpha5 text-white bg-transparent rounded-lg text-sm p-2 w-full md:w-96
-                 h-32 focus:border-whiteAlpha7 ${methods.formState.errors.dArtName && "border border-danger"}`}
+                className={`outline-none border border-whiteAlpha5 text-white bg-transparent rounded-lg text-sm p-2 w-[288px] md:w-96
+                 h-32 focus:border-whiteAlpha7 ${methods.formState.errors.description && "border border-dangerInput"}`}
                 placeholder="Description"
               />
               {methods.formState.errors.description &&

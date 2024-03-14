@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./Footer.module.css";
 import { BsTwitterX, BsInstagram, BsDiscord, BsYoutube } from "react-icons/bs";
 import { FaRedditAlien, FaTiktok } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";

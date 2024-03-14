@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link"
-import styles from "./DigitalArts.module.css"
 import Image from "next/image"
 import { FaDollarSign } from "react-icons/fa6";
 import { DArtDataType } from "@/app/api/_actions";
@@ -126,49 +125,3 @@ export default DigitalArts
 
 
 
-{/* <section className={styles.NftsSection}>
-      <div className={styles.NftsContainer}>
-        <div className={styles.NftsContainerTitle}>
-          <h1 className={styles.NftsContainerTitleH}>Popular Digital Arts</h1>
-          <Link href="/arts" className={styles.NftsContainerTitleA} style={{ textDecoration: "none" }}>
-            View all
-          </Link>
-        </div>
-        <div className={styles.NftsContainerCards}>
-          {featuredArts.map((art, index) => (
-            <div 
-              key={index}
-              className={styles.NftsContainerCard}
-              onClick={() => router.push(`/arts/${art.uuid}`)}
-              >
-              <div className={styles.NftsContainerCardImg}>
-                <Image 
-                  src={art.imageUrl}
-                  alt="Digital Art"
-                  quality={100}
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className={styles.NftsContainerCardTitle}>
-                <p className={styles.NftsContainerCardTitleP}>
-                  {art.name}
-                </p>
-                <div className={styles.NftsContainerCardTitlePrice}>
-                  <FaDollarSign />
-                  <p className={styles.NftsContainerCardTitlePriceP}>{art.price}</p>
-                </div>
-              </div>
-              <div className={styles.NftsContainerCardDesc}>
-                <p className={styles.NftsContainerCardDescP}>
-                  24h volume
-                </p>
-                <button className={styles.NftsContainerCardDescBtn}>
-                  Buy
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section> */}

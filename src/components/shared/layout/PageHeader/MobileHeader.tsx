@@ -1,5 +1,4 @@
 "use client"
-import styles from './PageHeader.module.css';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import AuthForm from "../AuthForm/AuthForm";
 import { useRouter } from "next/navigation";

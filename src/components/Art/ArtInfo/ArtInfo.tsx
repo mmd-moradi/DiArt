@@ -3,13 +3,14 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { BsTextLeft } from "react-icons/bs";
 import {FaPlus, FaDollarSign } from "react-icons/fa"
 
-import styles from "./ArtInfo.module.css"
 import { FaRegClock } from "react-icons/fa6";
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import { FaMinus } from "react-icons/fa6";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { storageContext } from "@/state/storageContext/StorageContext";
+import { getSession } from "next-auth/react";
+import { AuthFormContext } from "@/state/authpopupContext/AuthPopupContext";
 
 export type DArtCartDataType = {
   name: string;
@@ -57,6 +58,7 @@ const ArtInfo = ({
   const [quantity, setQuantity] = useState<number>(1);
   const [realPrice, setRealPrice] = useState<number>(price);
   const { state, dispatch } = useContext(storageContext);
+  const {state: showAuthForm ,dispatch: setShowAuthForm} = useContext(AuthFormContext);
   const handleIncrease = () => {
     if(quantity < nDarts) {
       const newQuantity = quantity + 1;
@@ -100,6 +102,30 @@ const ArtInfo = ({
     dispatch({type: "STORAGE_UPDATED"})
     toast.success("Added to cart");
   }
+
+  const buyNowFn = async() => {
+    const session = getSession();
+    if (!session) {
+      setShowAuthForm({type: "AuthFormOpened"})
+      toast.error("You need to be logged in to purchase items");
+      return;
+    }
+    const res = await fetch("/api/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data: [{
+          price_id: price_id,
+          quantity: quantity
+        }]
+      }),
+    })
+    const data = await res.json();
+    localStorage.removeItem("cart");
+    window.location.assign(data)
+  }
   return (
     <div className="w-full h-[600px] py-3 flex flex-col items-start justify-start">
       <div className="w-full flex flex-col items-start justify-start">
@@ -127,7 +153,13 @@ const ArtInfo = ({
           <div className="w-full flex flex-col items-start justify-start gap-6 md:flex-row md:items-center">
             <div className="w-full h-full flex items-center justify-start rounded-lg bg-bacBuyButton overflow-hidden md:flex-1">
               <div className="flex items-center justify-center flex-[1.7] bg-transparent border-r border-opacity-50 hover:bg-bacBuyButtonHover">
-                <button className="w-full bg-transparent py-6 px-3 flex justify-center items-center text-center border-none text-xl font-semibold text-white cursor-pointer md:py-4">Buy now</button>
+                <button
+                  onClick={buyNowFn}
+                  className="w-full bg-transparent py-6 px-3 flex justify-center items-center text-center border-none text-xl
+                  font-semibold text-white cursor-pointer md:py-4"
+                  >
+                    Buy now
+                </button>
               </div>
               <div className="flex items-center justify-center h-full flex-[0.3] bg-transparent hover:bg-bacBuyButtonHover">
                 <button onClick={addtoCart} className="w-full py-2 px-3 text-3xl flex justify-center items-center text-center bg-transparent border-none text-white cursor-pointer"><MdOutlineShoppingCart /></button>

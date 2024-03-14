@@ -52,7 +52,7 @@ const config = {
         blackAlpha7: "rgba(0, 0, 0, 0.64)",
         blackAlpha8: "rgba(0, 0, 0, 0.80)",
         blackAlpha9: "rgba(0, 0, 0, 0.92)",
-        danger: "#FF035E",
+        dangerInput: "#FF035E",
         dangerText: "#FF6B6B",
         warning: "#FFEB11",
         info: "#02A4FC",

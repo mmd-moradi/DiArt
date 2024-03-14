@@ -7,7 +7,6 @@ import {
   CheckIcon,
   ChevronRightIcon,
 } from "@radix-ui/react-icons";
-import styles from  "./HamMenu.module.css";
 import { IoMdCreate } from "react-icons/io";
 import { Session } from "next-auth";
 import { CgProfile } from "react-icons/cg";
@@ -147,89 +146,3 @@ export default HamMenu;
 
 
 
-
-{/* <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <button className={styles.IconButton} aria-label="Customise options">
-          <HamburgerMenuIcon style={{ color: "white"}} />
-        </button>
-      </DropdownMenu.Trigger>
-
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content className={styles.DropdownMenuContent} sideOffset={5}>
-          <DropdownMenu.Item className={styles.DropdownMenuItem}>
-            <Link
-              href={session ? "/account" : "/"}
-              className={styles.HamMenuItemLink}
-              passHref
-            >
-              <CgProfile size={16} />
-              <span className={styles.HamMenuItemText}>Account</span>
-            </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className={styles.DropdownMenuItem}>
-            <Link
-              href="/arts"
-              className={styles.HamMenuItemLink}
-              passHref
-            >
-              <SiHiveBlockchain size={16} />
-              <span className={styles.HamMenuItemText}>Arts</span>
-            </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className={styles.DropdownMenuItem}>
-            <Link
-              href="/marketplace"
-              className={styles.HamMenuItemLink}
-              passHref
-            >
-              <RiShoppingBag3Fill size={16} />
-              <span className={styles.HamMenuItemText}>MarketPlace</span>
-            </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className={styles.DropdownMenuItem}>
-            <Link
-              href="/create"
-              className={styles.HamMenuItemLink}
-              passHref
-            >
-              <IoMdCreate size={16} />
-              <span className={styles.HamMenuItemText}>Create</span>
-            </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className={styles.DropdownMenuItem}>
-            <Link
-              href="/activity"
-              className={styles.HamMenuItemLink}
-              passHref
-            >
-              <FiActivity size={16} />
-              <span className={styles.HamMenuItemText}>Activity</span>
-            </Link>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className={styles.DropdownMenuItem}>
-            {session ? (
-              <button
-                type="button"
-                style={{ border: "none", backgroundColor: "transparent", display: "flex", alignItems: "center",
-                gap: "4px", cursor: "pointer", width: "100%"}}
-                onClick={() => signOut()}
-                >
-                  <IoIosLogOut size={16} />
-                  <span className={styles.HamMenuItemText}>Logout</span>
-              </button>
-            ): (
-              <button
-                type="button"
-                style={{ border: "none", backgroundColor: "transparent", display: "flex", alignItems: "center", gap: "4px"}}
-                onClick={() => setShowForm(showForm ? {type: "AuthFormClosed"}: {type: "AuthFormOpened"})}
-              >
-                <MdOutlineWallet size={16} color="white" />
-                <span>Login</span>
-              </button>
-            )}
-          </DropdownMenu.Item>
-          <DropdownMenu.Arrow className={styles.DropdownMenuArrow} />
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root> */}

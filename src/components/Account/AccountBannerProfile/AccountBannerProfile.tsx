@@ -2,7 +2,6 @@
 import { useCallback, useEffect, useState } from "react"
 import { FileRejection, useDropzone } from "react-dropzone"
 import toast from "react-hot-toast";
-import styles from "./AccountBannerProfile.module.css"
 import Image from "next/image";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { getsigniture, saveBannerToDb } from "@/app/api/_actions";
@@ -77,7 +76,7 @@ const AccountBannerProfile = ({session, bannerUrl}: Props) => {
 
   return (
     <>
-      <div className={styles.AccountProfileBanImgContainer}>
+      <div className="absolute inset-0">
         <Image 
           alt="Banner Image"
           src={uploadedImgUrl || "/images/bacBan.jpg"}
@@ -86,11 +85,11 @@ const AccountBannerProfile = ({session, bannerUrl}: Props) => {
           style={{objectFit: "cover"}}
         />
         <div {...getRootProps({
-          className: styles.AccountProfileBanImgContainer,
+          className: "absolute inset-0",
         })}>
           <input {...getInputProps()} />
-          <div className={styles.AccountProfileBanIconCon}>
-            <div className={styles.AccountProfileBanIcon}>
+          <div className="group absolute inset-0 z-[5] transition-all cursor-pointer ease-in-out duration-200 hover:bg-whiteAlpha0">
+            <div className="h-full hidden justify-center items-center z-[6] pt-4 cursor-pointer group-hover:flex">
               <MdOutlineModeEdit size={25} />
             </div>
           </div>

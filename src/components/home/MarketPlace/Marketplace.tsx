@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import styles from "./Marketplace.module.css";
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
@@ -62,8 +61,9 @@ const Marketplace = () => {
           </p>
           <button 
             onClick={() => router.push("/marketplace") }
-            className="group w-4/5 flex px-4 py-4 justify-center items-center gap-2 bg-gradient-primary rounded-full bg-clip-text text-transparent border border-blue-500 text-base font-semibold cursor-pointer hover:bg-clip-border hover:text-white md:w-3/5">
-            Explore Marketplace <FaArrowRight size={16} className="text-blue-500 transition-transform duration-300 group-hover:text-white group-hover:translate-x-2" />
+            className="group w-4/5 flex px-4 py-4 gap-4 justify-center items-center bg-gradient-primary rounded-full bg-clip-text text-transparent border border-blue-500 text-base font-semibold cursor-pointer hover:bg-clip-border hover:text-white md:w-3/5">
+            <span>Explore Marketplace</span>
+            <FaArrowRight size={16} className="text-blue-500 transition-transform duration-300 group-hover:text-white group-hover:translate-x-2" />
           </button>
         </div>
       </div>

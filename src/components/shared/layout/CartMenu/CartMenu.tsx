@@ -1,6 +1,5 @@
 "use client"
 import { BsExclamationCircle } from "react-icons/bs";
-import styles from "./CartMenu.module.css"
 import Image from "next/image";
 import { FaDollarSign, FaStripe } from "react-icons/fa6";
 import { FaRegTrashAlt } from "react-icons/fa";

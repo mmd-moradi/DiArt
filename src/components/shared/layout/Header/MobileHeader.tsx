@@ -5,7 +5,6 @@ import { Session } from "next-auth";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import AuthForm from "../AuthForm/AuthForm";
-import styles from "./Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { IoIosLogOut } from "react-icons/io";

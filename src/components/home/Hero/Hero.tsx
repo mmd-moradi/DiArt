@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import styles from "./Hero.module.css"
 import { FaDollarSign } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 const Hero = () => {
@@ -58,48 +57,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-
-
-{/* <section className={styles.Hero}>
-<div className={styles.HeroContainer}>
-  <div className={styles.HeroCta}>
-    <h1 className={styles.HeroCtaTitle}>Discover, collect,<br />and sell extraordinary<br />Digital Arts</h1>
-    <p className={styles.HeroCtaDesc}>
-      Welcome to our website , where we provide comprehensive information on Digital Arts and their impact on the digital world .
-    </p>
-    <div className={styles.HeroCtaButtons}>
-      <button className={styles.HeroCtaButton1}>Explore</button>
-      <button className={styles.HeroCtaButton2}>Create</button>
-    </div>
-  </div>
-  <div className={styles.HeroImage}>
-    <div className={styles.HeroImgContainer}>
-        <div className={styles.HeroImageImg}>
-          <Image
-            src="/images/heroImg2.jpg"
-            alt="nft"
-            quality={100}
-            fill
-            style={{ objectFit:  "cover" }} />
-        </div>
-        <div className={styles.HeroImageDesc}>
-          <div className={styles.HeroImageDesc1}>
-            <p className={styles.HeroImageDesc1P}>MRD collection</p>
-            <p className={styles.HeroImageDesc1P}>Top bid</p>
-          </div>
-          <div className={styles.HeroImageDesc1}>
-            <p className={styles.HeroImageDesc1P2}>MRD #10123334</p>
-            <div className={styles.HeroImageDesc1P2Con}>
-              <FaDollarSign size={16} style={{ color: "var(--secondary)"}}/>
-              <p className={styles.HeroImageDesc1P2}>3,222</p>
-            </div>
-          </div>
-          <div className={styles.HeroImageDesc2}>
-            <p className={styles.HeroImageDesc1P2}>7 days left</p>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-</section> */}

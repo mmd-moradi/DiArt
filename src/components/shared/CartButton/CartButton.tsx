@@ -1,6 +1,5 @@
 "use client"
 import { MdOutlineShoppingCart } from "react-icons/md"
-import styles from "./CartButton.module.css";
 import { useContext, useEffect, useState } from "react";
 import { DArtCartDataType } from "@/components/Art/ArtInfo/ArtInfo";
 import { storageContext } from "@/state/storageContext/StorageContext";

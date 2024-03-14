@@ -1,6 +1,5 @@
 import { FaDollarSign } from "react-icons/fa6";
 import { BiLinkExternal } from "react-icons/bi";
-import styles from "./ArtImg.module.css"
 import Link from "next/link";
 import Image from "next/image";
 

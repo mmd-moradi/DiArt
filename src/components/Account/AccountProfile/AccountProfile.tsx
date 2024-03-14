@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import styles from "./AccountProfile.module.css"
 import { Dispatch, SetStateAction, useCallback, useContext, useEffect, useState } from "react";
 import { Session } from "next-auth";
 import { FileRejection, useDropzone } from "react-dropzone";
@@ -79,7 +78,7 @@ const AccountProfile = ({ session, profileImgUrl }: Props) => {
 
   }, [uploadedImg])
   return (
-    <div className={styles.AccountProfileImgCon}>
+    <div className="relative bg-[#121212] overflow-hidden w-full h-full">
       <Image 
         alt="Profile Image"
         src={ uploadedImgUrl || "/images/userBacImg.png"}
@@ -87,11 +86,11 @@ const AccountProfile = ({ session, profileImgUrl }: Props) => {
         style={{objectFit: "cover"}}
       />
       <div {...getRootProps({
-          className: styles.AccountProfileUploadCon,
+          className: "absolute inset-0",
         })}>
           <input {...getInputProps()} />
-          <div className={styles.AccountProfileIconCon}>
-            <div className={styles.AccountProfileIcon}>
+          <div className="group absolute inset-0 z-[6] transition-all duration-200 ease-in-out hover:bg-whiteAlpha0">
+            <div className="h-full hidden items-center justify-center z-[7] cursor-pointer group-hover:flex">
               <MdOutlineModeEdit size={25} />
             </div>
           </div>

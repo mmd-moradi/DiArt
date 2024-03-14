@@ -1,5 +1,4 @@
 import AccountBannerProfile from "@/components/Account/AccountBannerProfile/AccountBannerProfile"
-import styles from "./Account.module.css"
 import { getSession } from "next-auth/react"
 import AccountProfile from "@/components/Account/AccountProfile/AccountProfile";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";

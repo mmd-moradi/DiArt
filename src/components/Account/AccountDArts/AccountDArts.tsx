@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import styles from "./AccountDArts.module.css"
 import { FaDollarSign } from "react-icons/fa6";
 import { DArt } from "@/models/DArt"
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import styles from "./AuthForm.module.css";
+
 import React, { Dispatch, SetStateAction } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import * as Form from "@radix-ui/react-form";

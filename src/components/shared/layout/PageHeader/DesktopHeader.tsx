@@ -1,6 +1,5 @@
 "use client"
 import { Session } from "next-auth";
-import styles from "../PageHeader/PageHeader.module.css";
 import { IoIosLogOut } from "react-icons/io";
 import { signOut } from "next-auth/react";
 import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
