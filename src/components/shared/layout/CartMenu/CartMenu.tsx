@@ -4,11 +4,8 @@ import Image from "next/image";
 import { FaDollarSign, FaStripe } from "react-icons/fa6";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
-import * as Radio from '@radix-ui/react-radio-group';
 
-
-// import * as RadioGroup from "@radix-ui/react-radio-group";
-import { Dispatch, SetStateAction, use, useContext, useEffect, useState } from "react";
+import { Dispatch, SetStateAction ,useContext, useEffect, useState } from "react";
 import { DArtCartDataType } from "@/components/Art/ArtInfo/ArtInfo";
 import { storageContext } from "@/state/storageContext/StorageContext";
 import Link from "next/link";
