@@ -1,11 +1,9 @@
 import AccountBannerProfile from "@/components/Account/AccountBannerProfile/AccountBannerProfile"
-import { getSession } from "next-auth/react"
 import AccountProfile from "@/components/Account/AccountProfile/AccountProfile";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { getDArtsData, getUserData } from "@/app/api/_actions";
-import { useState } from "react";
 import AccountDArts from "@/components/Account/AccountDArts/AccountDArts";
 import EmptyDiArt from "@/components/Account/EmptyDiArt/EmptyDiArt";
 const AccountPage = async () => {

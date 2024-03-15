@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { DArtDataType, getFeaturedDArts } from "@/app/api/_actions";
 import FeaturedArts from "./FeaturedArts";
+import { DArtDataType } from "@/app/api/_actions";
 
-const DigitalArts = async() => {
-  const featuredArts = await getFeaturedDArts();
+type Props = {
+  featuredArts: DArtDataType[];
+}
+const DigitalArts = ({featuredArts}: Props) => {
   return (
     <section className="mt-24 w-full px-8 pb-8 bg-black bg-opacity-10 md:px-16">
       <div className="flex flex-col justify-start space-y-12 py-20 px-1">

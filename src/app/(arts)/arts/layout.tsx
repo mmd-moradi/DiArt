@@ -5,7 +5,6 @@ import { Toaster } from "react-hot-toast";
 import PageHeader from "@/components/shared/layout/PageHeader/PageHeader";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
 import { StorageProvider } from "@/state/storageContext/StorageContext";
 import { AuthFormProvider } from "@/state/authpopupContext/AuthPopupContext";
 import { cn } from "@/lib/utils";

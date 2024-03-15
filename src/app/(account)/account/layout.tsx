@@ -4,7 +4,6 @@ import { Poppins } from "next/font/google";
 import "../../global.css"
 import { Toaster } from "react-hot-toast";
 import PageHeader from "@/components/shared/layout/PageHeader/PageHeader";
-import { getUserData } from "@/app/api/_actions";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
