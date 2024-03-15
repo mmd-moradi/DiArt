@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex flex-col items-end md:flex-1">
-          <div className="w-full rounded-3xl border border-blue-500 bg-gradient-primary-2 flex flex-col gap-4 px-8 py-6 md:max-w-[460px]">
+          <div className="w-full rounded-3xl border border-blue-500 bg-gradient-primary-2 flex flex-col gap-4 px-8 py-6 md:max-w-[500px]">
             <div className="relative w-full overflow-hidden rounded-2xl h-[400px] md:h-[450px]">
               <Image
                 src="/images/heroImg2.jpg"

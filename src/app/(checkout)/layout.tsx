@@ -5,12 +5,9 @@ import Footer from "@/components/shared/layout/Footer/Footer"
 import "../global.css"
 import { Poppins } from "next/font/google"
 import { Toaster } from "react-hot-toast"
-import { SessionProvider } from "next-auth/react"
 import Authprovider from "@/components/Auth/Authprovider"
 import { getServerSession } from "next-auth"
 import { authOptions } from "../api/auth/[...nextauth]/route"
-import { redirect } from "next/navigation"
-import { getUserData } from "../api/_actions"
 import { StorageProvider } from "@/state/storageContext/StorageContext"
 import { AuthFormProvider } from "@/state/authpopupContext/AuthPopupContext"
 
@@ -40,7 +37,7 @@ export default async function HomeLayout({
           <html lang="en" className={poppins.className}>
             <body>
               <Toaster />
-              <Header session={session}  />
+              <Header session={session} />
                 {children}
               <Footer />
             </body>

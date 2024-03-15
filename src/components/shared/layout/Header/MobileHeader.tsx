@@ -1,3 +1,4 @@
+"use client"
 import { getUserData } from "@/app/api/_actions";
 import { AuthFormContext } from "@/state/authpopupContext/AuthPopupContext";
 import { userDataContext } from "@/state/context/userProfileContext";

@@ -104,7 +104,7 @@ const ArtInfo = ({
   }
 
   const buyNowFn = async() => {
-    const session = getSession();
+    const session = await getSession();
     if (!session) {
       setShowAuthForm({type: "AuthFormOpened"})
       toast.error("You need to be logged in to purchase items");

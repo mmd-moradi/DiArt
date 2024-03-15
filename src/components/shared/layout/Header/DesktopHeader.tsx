@@ -1,3 +1,4 @@
+"use client"
 import { getUserData } from "@/app/api/_actions";
 import { AuthFormContext } from "@/state/authpopupContext/AuthPopupContext";
 import { userDataContext } from "@/state/context/userProfileContext";
@@ -10,7 +11,7 @@ import Image from "next/image";
 import { IoIosLogOut } from "react-icons/io";
 import { MdOutlineShoppingCart, MdOutlineWallet } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-import { signOut } from "next-auth/react";
+import { getSession, signOut } from "next-auth/react";
 import CartButton from "../../CartButton/CartButton";
 
 type Props = {
