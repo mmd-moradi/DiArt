@@ -1,8 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DiArt - Digital Art Marketplace
 
+
+
+DiArt is a digital art marketplace where creators can easily launch and sell their digital art pieces. Built with TypeScript, Next.js, React, Tailwind CSS, MongoDB, and Stripe, DiArt offers a seamless platform for buying and selling digital artworks.
+
+## Features
+- Creating and launching digital art pieces
+- Easy payment gateway integration with Stripe
+- Buy and sell functionality
+- Account page for users
+- Normal and OAuth authentication, including Google authentication
+
+## Tech Stack
+- TypeScript
+- Next.js
+- React
+- Tailwind CSS
+- MongoDB
+- Stripe
 ## Getting Started
 
-## Project is still under development
 
 First, run the development server:
 
