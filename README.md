@@ -1,5 +1,6 @@
 # DiArt - Digital Art Marketplace
 
+![thumnailgithubDiart](https://github.com/mmd-moradi/DiArt/assets/110211422/5df9cce1-cfd0-4363-83ee-425921d5326a)
 
 
 DiArt is a digital art marketplace where creators can easily launch and sell their digital art pieces. Built with TypeScript, Next.js, React, Tailwind CSS, MongoDB, and Stripe, DiArt offers a seamless platform for buying and selling digital artworks.
