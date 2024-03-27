@@ -49,7 +49,7 @@ const HamMenu = ({session, setShowForm, showForm, homeMenu, imgUrl}: Props) => {
       {session && (
         <DropdownMenu.Item className="group text-sm leading-none text-primary rounded-[3px] flex items-center h-[25px] relative p-6 select-none outline-none data-[disabled]:text-gray-300 data-[disabled]:pointer-events-none data-[highlighted]:bg-gray-50 data-[highlighted]:text-blackAlpha7 hover:opacity-80">
             <Link
-              href={session ? "/account" : "/"}
+              href={"/account"}
               className="w-full no-underline text-primary flex items-center gap-2"
               passHref
             >
@@ -61,7 +61,7 @@ const HamMenu = ({session, setShowForm, showForm, homeMenu, imgUrl}: Props) => {
         <DropdownMenu.Separator className="pl-4 h-[1px] bg-gray-300" />
         <DropdownMenu.Item className="group text-sm leading-none text-primary rounded-[3px] flex items-center h-[25px] relative p-6 select-none outline-none data-[disabled]:text-gray-300 data-[disabled]:pointer-events-none data-[highlighted]:bg-gray-50 data-[highlighted]:text-blackAlpha7 hover:opacity-80">
           <Link
-            href={session ? "/arts" : "/"}
+            href="/arts"
             className="w-full no-underline text-primary flex items-center gap-2"
             passHref
           >
@@ -72,7 +72,7 @@ const HamMenu = ({session, setShowForm, showForm, homeMenu, imgUrl}: Props) => {
       <DropdownMenu.Separator className="pl-4 h-[1px] bg-gray-300" />
       <DropdownMenu.Item className="group text-sm leading-none text-primary rounded-[3px] flex items-center h-[25px] relative p-6 select-none outline-none data-[disabled]:text-gray-300 data-[disabled]:pointer-events-none data-[highlighted]:bg-gray-50 data-[highlighted]:text-blackAlpha7 hover:opacity-80">
           <Link
-            href={session ? "/marketplace" : "/"}
+            href="/marketplace"
             className="w-full no-underline text-primary flex items-center gap-2"
             passHref
           >
@@ -83,7 +83,7 @@ const HamMenu = ({session, setShowForm, showForm, homeMenu, imgUrl}: Props) => {
       <DropdownMenu.Separator className="pl-4 h-[1px] bg-gray-300" />
       <DropdownMenu.Item className="group text-sm leading-none text-primary rounded-[3px] flex items-center h-[25px] relative p-6 select-none outline-none data-[disabled]:text-gray-300 data-[disabled]:pointer-events-none data-[highlighted]:bg-gray-50 data-[highlighted]:text-blackAlpha7 hover:opacity-80">
           <Link
-            href={session ? "/create" : "/"}
+            href="/create"
             className="w-full no-underline text-primary flex items-center gap-2"
             passHref
           >
@@ -94,7 +94,7 @@ const HamMenu = ({session, setShowForm, showForm, homeMenu, imgUrl}: Props) => {
       <DropdownMenu.Separator className="pl-4 h-[1px] bg-gray-300" />
       <DropdownMenu.Item className="group text-sm leading-none text-primary rounded-[3px] flex items-center h-[25px] relative p-6 select-none outline-none data-[disabled]:text-gray-300 data-[disabled]:pointer-events-none data-[highlighted]:bg-gray-50 data-[highlighted]:text-blackAlpha7 hover:opacity-80">
           <Link
-            href={session ? "/activity" : "/"}
+            href="/activity"
             className="w-full no-underline text-primary flex items-center gap-2"
             passHref
           >
@@ -119,7 +119,7 @@ const HamMenu = ({session, setShowForm, showForm, homeMenu, imgUrl}: Props) => {
             className="w-full no-underline text-primary flex items-center gap-2"
             onClick={() => setShowForm(showForm ? {type: "AuthFormClosed"}: {type: "AuthFormOpened"})}
           >
-            <MdOutlineWallet size={16} color="white" />
+            <MdOutlineWallet size={18} />
             <span className="text-base font-medium">Login</span>
           </button>
         )}
