@@ -24,11 +24,12 @@ export const authOptions: AuthOptions = {
           password: string;
         };
         dbConnect();
+        console.log(email, password);
         const user = await UserModel.findOne({ email });
         if (!user) {
           throw new Error("email/pawssword is incorrect");
         }
-        const passwordMatch = user.comparePassword(password);
+        const passwordMatch = await user.comparePassword(password);
         if (!passwordMatch) {
           throw new Error("email/pawssword is incorrect");
         }

@@ -9,6 +9,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import toast from "react-hot-toast";
 import { AuthFormActionType } from "@/state/authpopupContext/AuthPopupContext";
+import { Icons } from "@/components/icons/icons";
 
 interface Props {
   show: boolean;
@@ -19,27 +20,27 @@ const AuthForm = ({show, setShowForm}: Props) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [userName, setUserName] = React.useState("");
-  const [busy, setBusy] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
   const passwordRegex = /[!@#$%^&*]/;
 
   const handleLogin = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      setBusy(true);
+      setIsLoading(true);
       const response = await signIn("credentials", {
         email,
         password,
         redirect: false
       })
       if (response?.ok) {
-        setBusy(false);
+        setIsLoading(false);
         setEmail("");
         setPassword("");
         setUserName("");
         setShowForm({type: "AuthFormClosed"});
         toast.success("Logged in successfully");
       } else if (response?.status === 401) {
-        setBusy(false);
+        setIsLoading(false);
         toast.error("Invalid credentials");
       }
     }catch (error) {
@@ -50,14 +51,14 @@ const AuthForm = ({show, setShowForm}: Props) => {
   const handleSignUp = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      setBusy(true);
+      setIsLoading(true);
       const response = await axios.post("/api/auth/register", {
         userName,
         email,
         password
       })
       if (response.status === 200) {
-        setBusy(false);
+        setIsLoading(false);
         setEmail("");
         setPassword("");
         setUserName("");
@@ -67,13 +68,13 @@ const AuthForm = ({show, setShowForm}: Props) => {
           redirect: false
         })
         if (res?.status == 200) {
-          toast.success("Logged in successfully");
-          setBusy(false);
+          toast.success("You've successfully signed up.");
+          setIsLoading(false);
         } else {
           toast.error("there was an error");
-          setBusy(false);
+          setIsLoading(false);
         }
-        setBusy(false);
+        setIsLoading(false);
         setShowForm({type: "AuthFormClosed"});
       }
     }catch (error) {
@@ -146,9 +147,10 @@ const AuthForm = ({show, setShowForm}: Props) => {
               </Form.Field>
               <Form.Submit className="py-3 px-16 w-full mt-3 rounded-lg bg-gradient-primary-1 text-base font-bold
                text-white border-none shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:bg-gradient-primary-2 active:shadow-sm active:translate-y-1 md:text-lg" asChild>
-                <button style={busy ? {opacity: "0.6"}: {opacity: "1"}} 
-                  disabled={busy}
+                <button className="flex items-center justify-center" style={isLoading ? {opacity: "0.5"}: {opacity: "1"}} 
+                  disabled={isLoading}
                 >
+                  {isLoading && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
                   Login
                 </button>
               </Form.Submit>
@@ -170,7 +172,7 @@ const AuthForm = ({show, setShowForm}: Props) => {
                     Please enter your Username
                   </Form.Message>
                   <Form.Message className="text-sm font-bold text-whitesmoke opacity-90" match="tooShort">
-                    Username must be at least 4 characters
+                    At least 4 characters
                   </Form.Message>
                 </div>
                 <Form.Control className="w-full inline-flex items-center justify-center rounded-md font-medium text-base text-gray-800 bg-whitesmoke shadow-sm border-white border hover:shadow-md focus:outline-blue-500 focus:ring-2 focus:ring-black focus:ring-opacity-30" asChild>
@@ -228,7 +230,8 @@ const AuthForm = ({show, setShowForm}: Props) => {
               </Form.Field>
               <Form.Submit className="py-3 px-16 w-full mt-3 rounded-lg bg-gradient-primary-1 text-base font-bold
                text-white border-none shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:bg-gradient-primary-2 active:shadow-sm active:translate-y-1 md:text-lg" asChild>
-                <button style={busy ? {opacity: "0.6"}: {opacity: "1"}} disabled={busy}>
+                <button className="flex items-center justify-center" style={isLoading ? {opacity: "0.5"}: {opacity: "1"}} disabled={isLoading}>
+                  {isLoading && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
                   Sign up 
                 </button>
               </Form.Submit>
