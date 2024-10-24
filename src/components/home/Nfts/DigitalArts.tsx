@@ -1,19 +1,23 @@
+"use client";
 import Link from "next/link";
 import FeaturedArts from "./FeaturedArts";
 import { DArtDataType } from "@/app/api/_actions";
 
 type Props = {
   featuredArts: DArtDataType[];
-}
-const DigitalArts = ({featuredArts}: Props) => {
+};
+const DigitalArts = ({ featuredArts }: Props) => {
   return (
     <section className="mt-24 w-full px-8 pb-8 bg-black bg-opacity-10 md:px-16">
       <div className="flex flex-col justify-start space-y-12 py-20 px-1">
         <div className="flex justify-between items-center">
-          <h1 className="text-white text-3xl font-semibold tracking-tighter md:text-4xl md:leading-tight">
+          <h1 className="text-white text-2xl font-semibold tracking-tighter md:text-4xl md:leading-tight">
             Popular Digital Arts
           </h1>
-          <Link href="/arts" className="text-secondary text-base font-semibold leading-tight tracking-tighter hover:text-white md:text-lg">
+          <Link
+            href="/arts"
+            className="text-secondary text-sm font-semibold leading-tight tracking-tighter hover:text-white md:text-lg"
+          >
             View all
           </Link>
         </div>
@@ -22,13 +26,7 @@ const DigitalArts = ({featuredArts}: Props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default DigitalArts
-
-
-
-
-
-
+export default DigitalArts;

@@ -1,3 +1,4 @@
+"use client";
 import { FaDollarSign } from "react-icons/fa6";
 import { BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
@@ -6,9 +7,9 @@ import Image from "next/image";
 type Props = {
   dArtName: string;
   imgUrl: string;
-}
+};
 
-const ArtImg = ({imgUrl, dArtName}: Props) => {
+const ArtImg = ({ imgUrl, dArtName }: Props) => {
   return (
     <div className="flex flex-col items-start justify-center rounded-lg w-full h-full border border-whiteAlpha1 shadow-sm bg-gradient-primary-1 overflow-hidden">
       <div className="w-full flex items-center justify-between p-3 border-b border-whiteAlpha1">
@@ -22,7 +23,7 @@ const ArtImg = ({imgUrl, dArtName}: Props) => {
         </Link>
       </div>
       <div className="relative w-full h-[500px] overflow-hidden md:h-[600px]">
-        <Image 
+        <Image
           src={imgUrl}
           alt={dArtName}
           fill
@@ -30,7 +31,7 @@ const ArtImg = ({imgUrl, dArtName}: Props) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ArtImg
+export default ArtImg;

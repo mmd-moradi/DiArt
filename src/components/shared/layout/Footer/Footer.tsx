@@ -1,23 +1,56 @@
+"use client";
 import Link from "next/link";
 import { BsTwitterX, BsInstagram, BsDiscord, BsYoutube } from "react-icons/bs";
 import { FaRedditAlien, FaTiktok } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import Image from "next/image";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { z } from "zod";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [subscribedEmail, setSubscribedEmail] = useState("");
+  const formSchema = z.object({
+    email: z
+      .string({ required_error: "Email can't be empty" })
+      .email({ message: "Invalid email address" }),
+  });
+  const handleSubscribe = (value: string) => {
+    const formResult = formSchema.safeParse({ email: value });
+    if (!formResult.success) {
+      return toast.error(formResult.error.errors[0].message);
+    }
+    toast.success("Subscribed successfully");
+    setSubscribedEmail("");
+  };
   return (
     <footer id="footer" className="w-full px-8 md:px-16 py-16 bg-whiteAlpha0">
       <div className="flex flex-col items-start gap-8">
         <div className="w-full flex flex-col justify-between gap-16 md:flex-row">
           <div className="w-full flex flex-col gap-4">
-            <h2 className="text-white text-2xl font-semibold leading-snug tracking-tighter">Follow our latest news</h2>
+            <h2 className="text-white text-2xl font-semibold leading-snug tracking-tighter">
+              Follow our latest news
+            </h2>
             <p className="text-secondary text-base font-medium leading-relaxed tracking-wider">
-              Join our mailing list to stay in the loop with our newest feature releases, Digital Arts drops, and tips and tricks for navigating DiArt.
+              Join our mailing list to stay in the loop with our newest feature
+              releases, Digital Arts drops, and tips and tricks for navigating
+              DiArt.
             </p>
             <div className="w-full flex gap-2 md:pr-2">
-              <input className="bg-transparent outline-none rounded-lg border border-whiteAlpha8 h-6 w-full text-base py-5 px-3 transition-all duration-200 ease-in-out text-white focus:border-white" type="email" placeholder="Your email address" />
-              <button className="outline-none border-none bg-gradient-primary px-4 py-[10px] rounded-lg text-white text-base cursor-pointer font-semibold hover:bg-gradient-primary-hover">Subscribe</button>
+              <input
+                className="bg-transparent outline-none rounded-lg border border-whiteAlpha8 h-6 w-full text-base py-5 px-3 transition-all duration-200 ease-in-out text-white focus:border-white"
+                type="email"
+                placeholder="Your email address"
+                value={subscribedEmail}
+                onChange={(e) => setSubscribedEmail(e.target.value)}
+              />
+              <button
+                onClick={() => handleSubscribe(subscribedEmail)}
+                className="outline-none border-none bg-gradient-primary px-4 py-[10px] rounded-lg text-white text-base cursor-pointer font-semibold hover:bg-gradient-primary-hover"
+              >
+                Subscribe
+              </button>
             </div>
           </div>
           <div className="w-full flex flex-col gap-4">
@@ -63,21 +96,26 @@ const Footer = () => {
                 />
               </div>
             </Link>
-
           </div>
           <div className="flex flex-col w-full items-start gap-8 md:flex-row md:justify-between">
             <div className="flex items-center">
-              <p className="text-base text-whiteAlpha75 font-light">© {currentYear} Diart, Inc</p>
+              <p className="text-base text-whiteAlpha75 font-light">
+                © {currentYear} Diart, Inc
+              </p>
             </div>
             <div className="flex items-center gap-12 pr-2">
-              <p className="text-sm text-whiteAlpha75 cursor-pointer font-light hover:text-white hover:font-medium">Privacy Policy</p>
-              <p className="text-sm text-whiteAlpha75 cursor-pointer font-light hover:text-white hover:font-medium">Terms of Service</p>
+              <p className="text-sm text-whiteAlpha75 cursor-pointer font-light hover:text-white hover:font-medium">
+                Privacy Policy
+              </p>
+              <p className="text-sm text-whiteAlpha75 cursor-pointer font-light hover:text-white hover:font-medium">
+                Terms of Service
+              </p>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
