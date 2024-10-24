@@ -1,7 +1,7 @@
 import Header from "@/components/shared/layout/Header/Header";
 import Footer from "@/components/shared/layout/Footer/Footer";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../../config/auth-options";
 
 export default async function RootLayout({
   children,

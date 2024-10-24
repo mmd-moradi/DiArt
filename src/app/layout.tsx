@@ -9,7 +9,7 @@ import { Poppins } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import Authprovider from "@/components/Auth/Authprovider";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "../config/auth-options";
 import { StorageProvider } from "@/state/storageContext/StorageContext";
 import { AuthFormProvider } from "@/state/authpopupContext/AuthPopupContext";
 import { cn } from "@/lib/utils";

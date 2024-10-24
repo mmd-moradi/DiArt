@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { authOptions } from "../auth/[...nextauth]/route";
+import { authOptions } from "../../../config/auth-options";
 import UserModel from "@/models/User";
 
 interface Products {

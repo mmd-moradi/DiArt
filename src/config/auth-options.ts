@@ -1,12 +1,12 @@
 import { randomChar, randomPass } from "@/lib/randomPass";
 import UserModel from "@/models/User";
 import dbConnect from "@/utils/dbConnect";
-import nextAuth from "next-auth";
+import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcrypt";
 
-const authHandler = nextAuth({
+export const authOptions: AuthOptions = {
   session: {
     strategy: "jwt",
   },
@@ -72,6 +72,4 @@ const authHandler = nextAuth({
       return session;
     },
   },
-});
-
-export { authHandler as GET, authHandler as POST };
+};
